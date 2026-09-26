@@ -1,8 +1,10 @@
 require('dotenv').config();
+// Add this line below to force IPv4 and fix the Render timeout issue
+require('dns').setDefaultResultOrder('ipv4first');
+
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
-
 const app = express();
 
 // Middleware
